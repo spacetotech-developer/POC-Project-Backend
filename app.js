@@ -14,8 +14,7 @@ db();
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(cors());
-app.use(cors());
+app.use(cors({ origin: 'https://poc-project-frontend.vercel.app' }));
 
 // router middleware.
 const apiRouter = express.Router();
@@ -25,3 +24,5 @@ apiRouter.use('/invoice',router.invoice_router);
 app.listen(API_PORT,()=>{
     console.log(`Server is running at port number ${API_PORT}`);
 })
+
+export default app;
