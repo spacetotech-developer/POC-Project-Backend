@@ -30,15 +30,19 @@ export const addInvoiceController = async(req,res,next)=>{
 
 export const getInvoiceController = async(req,res,next)=>{
    try {
-    const data = await Invoice.find()
+    const data = await Invoice.find();
+
+    // Extract only invoiceValue and invoiceDate from each document
+    const filteredData = data.map(doc => ({
+      invoiceValue: doc.invoiceValue,
+      invoiceDate: doc.invoiceDate,
+    }));
        
     return res.json({
         status:constant.msgType.successStatus,
         code:constant.msgCode.successCode,
         message: constant.msg.datafetch,
-        data: {
-            docs:data,
-        }
+        data: filteredData
     })
    } catch (error) {
     return res.json({
