@@ -13,11 +13,11 @@ db();
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(cors());
-app.use(cors({
-    origin: 'http://localhost:5173https://poc-project-frontend.vercel.app/', // frontend origin
-    credentials: true // if you're using cookies or sessions
-}));
+app.use(cors());
+// app.use(cors({
+//     origin: 'http://localhost:5173https://poc-project-frontend.vercel.app/', // frontend origin
+//     credentials: true // if you're using cookies or sessions
+// }));
 
 // router middleware.
 const apiRouter = express.Router();
