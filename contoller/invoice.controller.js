@@ -30,9 +30,8 @@ export const addInvoiceController = async(req,res,next)=>{
 
 export const getInvoiceController = async(req,res,next)=>{
    try {
-    const data = await Invoice.find();
-
-    // Extract only invoiceValue and invoiceDate from each document
+     const data = await Invoice.find({}, { invoiceValue: 1, invoiceDate: 1, _id: 0 })
+                             .sort({ invoiceDate: 1 }); 
     const filteredData = data.map(doc => ({
       invoiceValue: doc.invoiceValue,
       invoiceDate: doc.invoiceDate,

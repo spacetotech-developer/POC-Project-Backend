@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const dbUri = process.env.URL || "mongodb://localhost:27017/fallbackdb"; // Fallback for local testing
+const dbUri = process.env.URL || "mongodb://localhost:27017/invoice"; // Fallback for local testing
 
 const databaseConnection = async () => {
   if (!dbUri) {
