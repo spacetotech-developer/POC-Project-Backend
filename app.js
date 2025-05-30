@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(cors());
 app.use(cors({
-    origin: 'http://localhost:5173', // frontend origin
+    origin: 'http://localhost:5173https://poc-project-frontend.vercel.app/', // frontend origin
     credentials: true // if you're using cookies or sessions
 }));
 
