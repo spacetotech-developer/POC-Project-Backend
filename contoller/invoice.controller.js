@@ -1,5 +1,5 @@
-import Invoice from "../model/invoiceModel";
-import constant from "../constant";
+import Invoice from "../model/invoiceModel.js";
+import constant from "../constant.js";
 import mongoose from "mongoose";
 
 export const addInvoiceController = async(req,res,next)=>{

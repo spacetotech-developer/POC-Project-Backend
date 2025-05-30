@@ -1,5 +1,5 @@
 import Joi from 'joi';
-import constant from './constant';
+import constant from './constant.js';
 
 const todoValidation = (req, res, next) => {
   const schema = Joi.object({
