@@ -1,11 +1,10 @@
 import express from 'express';
-import config from 'config';
 import db from './database/databaseConfig.js';
 import bodyParser from 'body-parser';
 import router from './router/router.js';
 import cors from 'cors';
 const app = express();
-const {API_PORT} = config.get("PORTS");
+const API_PORT = process.env.PORT || 3000; 
 
 // database connection.
 db();
