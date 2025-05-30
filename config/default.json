@@ -6,6 +6,6 @@
     "AUTH": true
   },
   "PORTS": {
-    "API_PORT": 2035
+    "API_PORT": 3000
   }
 }

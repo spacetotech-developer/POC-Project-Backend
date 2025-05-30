@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon --exec babel-node app"
+     "start": "node app.js", 
+     "server": "nodemon --exec babel-node app.js" 
   },
   "keywords": [],
   "author": "",
